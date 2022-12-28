@@ -3,28 +3,26 @@ import { useState } from "react";
 import Gameboard from "./Gameboard";
 import Scoreboard from "./Scoreboard";
 
+// components
+// app
+//   header:       page title / github link
+//   game:         primary component - state, handlers, logic
+//     scoreboard:   current / high score
+//     gameboard:    grid container for all cards
+//       card:       generate individual cards
+
+// todo: introduction page
+//  explain game
+//  start button
+
 export default function Game() {
-  // state: initialize with:
-  //  1. array 1: all cards, random order
-  //  2. array 2: history of selected cards [empty]
-  //  3. currentScore
-  //  4. highScore
   const [cards, setCards] = useState(cardList);
   const [history, setHistory] = useState([]);
   const [currentScore, setCurrentScore] = useState(0);
   const [highScore, setHighScore] = useState(0);
 
-  // event handler function for all cards
-  //  - on click, capture 'cardname' attr & check history array via .some()
-  //    - if no previous hits, randomize card order & increment score
-  //    - if card has been selected already:
-  //      - compare score to high score. replace if higher.
-  //      - reset current score to zero
-  //      - reset history array
-  //  - restart game loop: randomize cards, random order
-
   const handleCardClick = (e) => {
-    // get name of the card that was clicked: data-cardname attribute
+    // get name of card that was clicked via 'data-cardname' attribute
     const {
       dataset: { cardname: newCard },
     } = e.target;
@@ -33,6 +31,7 @@ export default function Game() {
     else {
       addToHistory(newCard);
       incrementCurrentScore();
+      shuffleCards();
     }
   };
 
@@ -43,6 +42,36 @@ export default function Game() {
   const addToHistory = (cardName) => setHistory([...history, cardName]);
 
   const incrementCurrentScore = () => setCurrentScore(currentScore + 1);
+
+  const shuffleCards = () => {
+    // utilizes the fisher-yates (aka knuth) shuffle algorithm
+
+    // create a copy of the cards array
+    let shuffledDeck = [...cards];
+
+    // starting at the last card
+    let currentIndex = shuffledDeck.length;
+    let randomIndex;
+
+    // while cards remain that need to be shuffled
+    while (currentIndex !== 0) {
+      // randomly select another card: from index 0 to currentIndex - 1
+      // example: currentIndex of 3 = 0, 1, or 2
+      randomIndex = Math.floor(Math.random() * currentIndex);
+
+      // decrement current card
+      currentIndex--;
+
+      // swap current card with the random card via array destructuring
+      [shuffledDeck[currentIndex], shuffledDeck[randomIndex]] = [
+        shuffledDeck[randomIndex],
+        shuffledDeck[currentIndex],
+      ];
+    }
+
+    // update state with the newly shuffled deck array
+    setCards(shuffledDeck);
+  };
 
   const roundOver = () => {
     if (isNewHighScore()) updateHighScore();
@@ -57,27 +86,6 @@ export default function Game() {
   const resetCurrentScore = () => setCurrentScore(0);
 
   const clearHistory = () => setHistory([]);
-
-  // create a master array, containg all card objects
-  //  { name: "HTML", icon: HTMLSVG.js }
-  //  pass array as prop to cards component
-  //  render with dataset attribute 'cardname'
-  //  pass eventhandler function
-
-  // utility function:
-  //  randomize array order: override allCards array in state
-
-  // components
-  // app
-  //   header:       page title / github link
-  //   game:         primary component - state, handlers, logic
-  //     scoreboard:   current / high score
-  //     gameboard:    grid container for all cards
-  //       card:       generate individual cards
-
-  // introduction page
-  //  explain game
-  //  start button
 
   return (
     <main>
