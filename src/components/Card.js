@@ -1,7 +1,7 @@
 import "../styles/Card.scss";
 
 export default function Card(props) {
-  const { details } = props;
+  const { details, onClick } = props;
   const { name, SVG } = details;
 
   // create individual cards
@@ -10,7 +10,7 @@ export default function Card(props) {
   //   - click click event handler
 
   return (
-    <div className="card" data-cardname={name}>
+    <div className="card" data-cardname={name} onClick={onClick}>
       <SVG />
       <h2 className="card-name">{name}</h2>
     </div>

@@ -44,8 +44,8 @@ export default function Game() {
 
   return (
     <main>
-      <Scoreboard />
-      <Gameboard allCards={cards} />
+      <Scoreboard currentScore={currentScore} highScore={highScore} />
+      <Gameboard allCards={cards} onClick={handleCardClick} />
     </main>
   );
 }
