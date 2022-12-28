@@ -28,5 +28,9 @@ In progress...
 # clone repo
 git clone https://github.com/bmilcs/odin-memory-card
 
+# install all dependencies
+npm install
 
+# run app
+npm start
 ```
