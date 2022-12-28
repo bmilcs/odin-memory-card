@@ -2,7 +2,12 @@
 
 Welcome to Bryan Miller's Memory Card Project, the [twentieth assignment](https://www.theodinproject.com/lessons/node-path-javascript-memory-card) within the Odin Project curriculum. The goal of this repo is to practice the following skill sets:
 
-- React Library
+- React
+  - Functional Components
+  - Hooks
+    - `useState`
+    - `useEffect`
+- SASS
 
 ## Summary
 
@@ -22,4 +27,6 @@ In progress...
 ```sh
 # clone repo
 git clone https://github.com/bmilcs/odin-memory-card
+
+
 ```
