@@ -41,9 +41,10 @@ export default function Game() {
   // introduction page
   //  explain game
   //  start button
+
   return (
     <main>
-      <Gameboard />
+      <Gameboard allCards={cards} />
       <Scoreboard />
     </main>
   );
