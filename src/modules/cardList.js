@@ -20,10 +20,6 @@ export const cardList = [
     component: "HTML.js",
   },
   {
-    name: "Jest",
-    component: "Jest.js",
-  },
-  {
     name: "JavaScript",
     component: "JavaScript.js",
   },
