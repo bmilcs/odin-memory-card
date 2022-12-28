@@ -1,54 +1,68 @@
+import Babel from "../assets/Babel";
+import CSS from "../assets/CSS";
+import ESLint from "../assets/ESLint";
+import Github from "../assets/Github";
+import HTML from "../assets/HTML";
+import JavaScript from "../assets/JavaScript";
+import Jest from "../assets/Jest";
+import Prettier from "../assets/Prettier";
+import React from "../assets/React";
+import Sass from "../assets/Sass";
+import VIM from "../assets/VIM";
+import VSCode from "../assets/VSCode";
+import Webpack from "../assets/Webpack";
+
 export const cardList = [
   {
     name: "Babel",
-    component: "Babel.js",
+    SVG: Babel,
   },
   {
     name: "CSS",
-    component: "CSS.js",
+    SVG: CSS,
   },
   {
     name: "ESLint",
-    component: "ESLint.js",
+    SVG: ESLint,
   },
   {
     name: "Github",
-    component: "Github.js",
+    SVG: Github,
   },
   {
     name: "HTML",
-    component: "HTML.js",
+    SVG: HTML,
   },
   {
     name: "JavaScript",
-    component: "JavaScript.js",
+    SVG: JavaScript,
   },
   {
     name: "Jest",
-    component: "Jest.js",
+    SVG: Jest,
   },
   {
     name: "Prettier",
-    component: "Prettier.js",
+    SVG: Prettier,
   },
   {
     name: "React",
-    component: "React.js",
+    SVG: React,
   },
   {
-    name: "SASS",
-    component: "Sass.js",
+    name: "Sass",
+    SVG: Sass,
   },
   {
     name: "VIM",
-    component: "VIM.js",
+    SVG: VIM,
   },
   {
     name: "VSCode",
-    component: "VSCode.js",
+    SVG: VSCode,
   },
   {
     name: "Webpack",
-    component: "Webpack.js",
+    SVG: Webpack,
   },
 ];
