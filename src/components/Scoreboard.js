@@ -1,7 +1,8 @@
 import "../styles/Scoreboard.scss";
 
-export default function Scoreboard() {
+export default function Scoreboard(props) {
   // render a Scoreboard containing current & high score
+  const { highScore, currentScore } = props;
 
   return (
     <div className="scoreboard-container">
@@ -9,11 +10,11 @@ export default function Scoreboard() {
       <div className="scoreboard-wrapper">
         <div className="score-container">
           <p className="scoretype-label">Current</p>
-          <h2 className="score current">8</h2>
+          <h2 className="score current">{currentScore}</h2>
         </div>
         <div className="score-container">
           <p className="scoretype-label">High</p>
-          <h2 className="score high">5</h2>
+          <h2 className="score high">{highScore}</h2>
         </div>
       </div>
     </div>
