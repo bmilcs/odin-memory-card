@@ -1,0 +1,9 @@
+.gameboard-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20vh, 1fr));
+  gap: 1rem;
+
+  max-height: 100vh;
+
+  padding: 2rem;
+}
