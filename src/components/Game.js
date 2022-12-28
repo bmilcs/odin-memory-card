@@ -1,5 +1,7 @@
 import { cardList } from "../modules/cardList";
 import { useState } from "react";
+import Gameboard from "./Gameboard";
+import Scoreboard from "./Scoreboard";
 
 export default function Game() {
   const [cards, setCards] = useState(cardList);
@@ -39,4 +41,10 @@ export default function Game() {
   // introduction page
   //  explain game
   //  start button
+  return (
+    <main>
+      <Gameboard />
+      <Scoreboard />
+    </main>
+  );
 }
