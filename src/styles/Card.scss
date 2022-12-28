@@ -7,6 +7,10 @@
 
   overflow: hidden;
 
+  box-shadow: var(--box-shadow-100);
+
+  transition: var(--transition);
+
   .card-name {
     font-weight: var(--fw-l);
     margin-bottom: 1rem;
@@ -18,7 +22,6 @@
     aspect-ratio: 1/1;
 
     scale: 0.85;
-    transition: var(--transition);
   }
 
   &:hover svg {
@@ -27,8 +30,8 @@
 
   &:hover .card-name {
     color: var(--clr-neutral-100);
-    background-color: var(--clr-neutral-900);
-    // font-weight: var(--fw-b);
+    // background-color: var(--clr-neutral-900);
+    font-weight: var(--fw-b);
     border-radius: var(--border-radius-900);
   }
 
