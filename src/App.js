@@ -1,5 +1,12 @@
+import Header from "./components/Header";
+import "./styles/App.scss";
+
 function App() {
-  return <h1 className="App">Memory Card</h1>;
+  return (
+    <>
+      <Header />
+    </>
+  );
 }
 
 export default App;
