@@ -1,0 +1,49 @@
+.scoreboard-container {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+
+  padding-inline: 2rem;
+
+  .scoreboard-wrapper {
+    display: flex;
+    gap: 3rem;
+
+    margin: 1rem;
+
+    border-radius: var(--border-radius-900);
+  }
+
+  .scoreboard-title {
+    font-size: 2.75rem;
+    text-transform: uppercase;
+    color: var(--clr-orange-800);
+  }
+
+  .scoretype-label {
+    font-size: 1.25rem;
+    color: var(--clr-neutral-200);
+    font-weight: var(--fw-r);
+  }
+
+  .score-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .score {
+    background: var(--clr-neutral-800);
+    padding-inline: 1.25rem;
+
+    border-radius: 1rem;
+
+    font-size: 3rem;
+    font-weight: var(--fw-xb);
+
+    &.high {
+      color: var(--clr-green-800);
+    }
+  }
+}

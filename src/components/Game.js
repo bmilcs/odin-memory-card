@@ -44,8 +44,8 @@ export default function Game() {
 
   return (
     <main>
-      <Gameboard allCards={cards} />
       <Scoreboard />
+      <Gameboard allCards={cards} />
     </main>
   );
 }
