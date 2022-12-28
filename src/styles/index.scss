@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;700;900&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-neutral-100: #dcdfe7;
+  --clr-neutral-200: #8389a3;
+  --clr-neutral-800: #33374c;
+  --clr-neutral-900: #262a3f;
+  --clr-green-900: #598030;
+  --clr-green-800: #668e3d;
+  --clr-red-900: #cc3768;
+  --clr-red-800: #cc517a;
+  --clr-orange-900: #b6662d;
+  --clr-orange-800: #c57339;
+  --clr-blue-900: #22478e;
+  --clr-blue-800: #2d539e;
+  --clr-blue-700: #327698;
+  --clr-blue-600: #3f83a6;
+  --clr-purple-900: #6845ad;
+  --clr-purple-800: #7759b4;
+
+  --ff-main: "Source Sans Pro", sans-serif;
+  --fw-xb: 900;
+  --fw-b: 700;
+  --fw-r: 400;
+  --fw-l: 200;
+}
+
+body {
+  font-family: var(--ff-main);
+  background: var(--clr-neutral-900);
+  color: var(--clr-neutral-100);
+}
