@@ -15,11 +15,10 @@ import Scoreboard from "./Scoreboard";
 //  explain game
 //  start button
 
-export default function Game() {
+export default function Game(props) {
   const [cards, setCards] = useState(cardList);
   const [history, setHistory] = useState([]);
-  const [currentScore, setCurrentScore] = useState(0);
-  const [highScore, setHighScore] = useState(0);
+  const { highScore, setHighScore, currentScore, setCurrentScore } = props;
 
   const handleCardClick = (e) => {
     // get name of card that was clicked via 'data-cardname' attribute
@@ -87,10 +86,5 @@ export default function Game() {
 
   const clearHistory = () => setHistory([]);
 
-  return (
-    <main>
-      <Scoreboard currentScore={currentScore} highScore={highScore} />
-      <Gameboard allCards={cards} onClick={handleCardClick} />
-    </main>
-  );
+  return <Gameboard allCards={cards} onClick={handleCardClick} />;
 }

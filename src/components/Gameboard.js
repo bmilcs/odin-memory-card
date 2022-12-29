@@ -7,10 +7,10 @@ export default function Gameboard(props) {
   // - receive randomized card list as a prop (game state)
   // - loop through, generating cards in order
   return (
-    <div className="gameboard-container">
+    <main className="gameboard-container">
       {allCards.map((card) => (
         <Card details={card} onClick={onClick} key={card.name} />
       ))}
-    </div>
+    </main>
   );
 }
