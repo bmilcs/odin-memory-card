@@ -1,19 +1,6 @@
+import { useState, useEffect } from "react";
 import { cardList } from "../modules/cardList";
-import { useState } from "react";
 import Gameboard from "./Gameboard";
-import Scoreboard from "./Scoreboard";
-
-// components
-// app
-//   header:       page title / github link
-//   game:         primary component - state, handlers, logic
-//     scoreboard:   current / high score
-//     gameboard:    grid container for all cards
-//       card:       generate individual cards
-
-// todo: introduction page
-//  explain game
-//  start button
 
 export default function Game(props) {
   const [cards, setCards] = useState(cardList);
