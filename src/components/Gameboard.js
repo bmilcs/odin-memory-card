@@ -3,9 +3,7 @@ import "../styles/Gameboard.scss";
 
 export default function Gameboard(props) {
   const { allCards, onClick } = props;
-  // create a gameboard, containing a grid of card components
-  // - receive randomized card list as a prop (game state)
-  // - loop through, generating cards in order
+
   return (
     <main className="gameboard-container">
       {allCards.map((card) => (
