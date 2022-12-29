@@ -63,7 +63,7 @@ export const cardList = [
 
 ## Piecing It All Together
 
-With all of the card data organized in it's own array, the `Game` component simply imports it and goes to work, passing it downward to the `Gameboard` component and then `Card` component through props. From there, the cards are rendered to the page.
+With all of the card data organized in it's own array, the `Game` component simply imports `cardList` and passes it downward to the `Gameboard` and then `Card` component through props. From there, the cards are rendered to the page.
 
 ```js
 // src/components/Game.js
@@ -79,12 +79,12 @@ export default function Game(props) {
 
 The `Game` component contains the bulk of the game flow logic:
 
-- Click Handler for cards: extracts the clicked card's name through `e.target` dataset attribute `data-cardname`
+- Click Handler for cards: extracts the clicked card's name through `e.target`'s dataset attribute: `data-cardname`
 - Stores an array of previously clicked cards
 - Determines when a round is over, or the same card is clicked twice
-- Keeps track of score: updating score state through props (originating in `App` component)
+- Updates score: state variables through props (originating in `App` component)
 
-In order to practice using `useEffect()`, the shuffling of cards occurs when the `currentScore` value changes --- after the user clicks on a card:
+In order to practice using `useEffect()`, the shuffling of cards occurs when the `currentScore` value changes --- which is triggered when the user clicks on a card:
 
 ```js
 useEffect(() => {
@@ -108,9 +108,9 @@ useEffect(() => {
 
 Memory Card was a quick, fun and easy project that taught me several things:
 
-- Planning, pseudo-code & organization save us a lot of time & effort
+- Organization, planning ahead & pseudo-code save us a lot of time & effort in the long run
 - Functional components & Hooks: `useState()` and `useEffect()`
-- Responive design techniques
+- Responive design techniques & troubleshooting
 
 ## Screenshots
 
