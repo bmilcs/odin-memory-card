@@ -18,11 +18,13 @@ header {
   color: var(--clr-red-800);
 
   @media screen and (min-width: 600px) {
+    // large screens: break all words out onto their own line ("web", "dev", etc.)
     max-width: min-content;
     text-align: left;
   }
 
   span {
+    // break "web dev" and "memory game" onto separate lines
     color: var(--clr-purple-800);
     display: inline-block;
   }
