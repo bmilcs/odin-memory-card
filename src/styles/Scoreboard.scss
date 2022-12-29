@@ -2,23 +2,13 @@
   grid-area: scoreboard;
   padding: min(2rem, 4vw);
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-
-  @media screen and (min-width: 600px) {
-    display: block;
-  }
-
   .scoreboard-wrapper {
-    border-radius: var(--border-radius-900);
-
     display: flex;
     gap: 1rem;
     align-items: center;
 
     @media screen and (min-width: 600px) {
+      // on large screens, break scores onto separate lines
       display: block;
     }
   }
@@ -29,12 +19,14 @@
     gap: 1rem;
 
     @media screen and (max-width: 600px) {
+      // on small screens, break score/label onto separate lines (centered)
       display: grid;
       place-items: center;
       gap: 0;
     }
   }
 
+  // current, high labels
   .scoretype-label {
     font-size: min(1.25rem, 4vw);
     font-weight: var(--fw-r);
@@ -44,6 +36,7 @@
     border-radius: var(--border-radius-900);
   }
 
+  // score number value
   .score {
     font-size: min(10vw, 3rem);
     font-weight: var(--fw-xb);
