@@ -13,6 +13,7 @@ footer {
   color: var(--clr-neutral-200);
 
   @media screen and (max-width: 600px) {
+    // small screens: center on page
     display: grid;
     place-items: center;
   }
@@ -28,8 +29,6 @@ footer {
     position: relative;
 
     display: flex;
-    justify-content: left;
-    align-items: center;
     gap: 0.25em;
 
     text-decoration: none;
