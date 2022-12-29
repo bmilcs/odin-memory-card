@@ -11,11 +11,14 @@
 
   scale: 0.85;
 
+  user-select: none;
+  cursor: pointer;
+
   transition: var(--transition);
 
   .card-name {
-    pointer-events: none;
     // force e.target to fallback to .card
+    pointer-events: none;
 
     font-weight: var(--fw-l);
 
@@ -24,8 +27,10 @@
   }
 
   svg {
-    max-width: 85%;
-    max-height: 85%;
+    // max-width: 80%;
+    padding: 1rem;
+    max-height: 90%;
+    aspect-ratio: 1/1;
 
     // force e.target to fallback to .card
     pointer-events: none;

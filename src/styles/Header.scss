@@ -1,64 +1,29 @@
 header {
+  grid-area: header;
+
   display: grid;
   align-items: center;
 
-  padding: 2rem;
+  padding: min(2rem, 4vw);
 }
 
 .page-title {
-  max-width: min-content;
+  text-align: center;
 
-  font-size: 3rem;
+  font-size: min(4rem, 10vw);
   font-weight: var(--fw-xb);
   text-transform: uppercase;
   line-height: 0.85;
 
   color: var(--clr-red-800);
 
+  @media screen and (min-width: 600px) {
+    max-width: min-content;
+    text-align: left;
+  }
+
   span {
     color: var(--clr-purple-800);
-  }
-}
-
-.git-container {
-  margin-top: auto;
-
-  font-weight: var(--fw-b);
-  font-size: 1.25rem;
-  text-transform: uppercase;
-
-  color: var(--clr-neutral-200);
-
-  --transition: all 0.2s ease-in-out;
-
-  svg {
-    width: 1.5rem;
-    aspect-ratio: 1/1;
-  }
-
-  a,
-  a:visited,
-  a:active {
-    position: relative;
-
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    gap: 0.25em;
-
-    text-decoration: none;
-    font-weight: var(--fw-r);
-    font-size: 1.25rem;
-    text-transform: uppercase;
-
-    color: var(--clr-neutral-200);
-
-    transition: var(--transition);
-
-    &:hover {
-      letter-spacing: 1px;
-      font-weight: var(--fw-xb);
-      color: var(--clr-neutral-100);
-    }
+    display: inline-block;
   }
 }

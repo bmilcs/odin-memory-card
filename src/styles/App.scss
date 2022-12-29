@@ -1,5 +1,17 @@
 #root {
   display: grid;
-  grid-template-columns: max-content 1fr;
+
   min-height: 100vh;
+
+  grid-template-columns: max-content 1fr;
+  grid-template-areas:
+    "header gameboard"
+    "scoreboard gameboard"
+    "footer gameboard";
+
+  @media screen and (max-width: 600px) {
+    grid-template-areas: "header" "scoreboard" "gameboard" "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content min-content 1fr min-content;
+  }
 }
