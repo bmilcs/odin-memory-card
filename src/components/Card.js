@@ -12,7 +12,7 @@ export default function Card(props) {
   return (
     <div className="card" data-cardname={name} onClick={onClick}>
       <SVG />
-      <h2 className="card-name">{name}</h2>
+      {/* <h2 className="card-name">{name}</h2> */}
     </div>
   );
 }
