@@ -12,8 +12,6 @@ footer {
 
   color: var(--clr-neutral-200);
 
-  --transition: all 0.2s ease-in-out;
-
   @media screen and (max-width: 600px) {
     display: grid;
     place-items: center;
