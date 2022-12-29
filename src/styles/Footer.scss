@@ -1,0 +1,52 @@
+footer {
+  grid-area: footer;
+  margin-top: auto;
+}
+
+.git-container {
+  padding: min(2rem, 4vw);
+
+  font-weight: var(--fw-b);
+  font-size: 1.25rem;
+  text-transform: uppercase;
+
+  color: var(--clr-neutral-200);
+
+  --transition: all 0.2s ease-in-out;
+
+  @media screen and (max-width: 600px) {
+    display: grid;
+    place-items: center;
+  }
+
+  svg {
+    width: 1.5rem;
+    aspect-ratio: 1/1;
+  }
+
+  a,
+  a:visited,
+  a:active {
+    position: relative;
+
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 0.25em;
+
+    text-decoration: none;
+    font-weight: var(--fw-r);
+    font-size: 1.25rem;
+    text-transform: uppercase;
+
+    color: var(--clr-neutral-200);
+
+    transition: var(--transition);
+
+    &:hover {
+      letter-spacing: 1px;
+      font-weight: var(--fw-xb);
+      color: var(--clr-neutral-100);
+    }
+  }
+}
